@@ -1,0 +1,118 @@
+//COLOR
+$color-lighterBlue: #EAF1F5;
+$color-lightBlue: #91DFDF;
+$color-tosca: #3FB7B7;
+$color-toscaDarker: #3ca8a8;
+$color-yellowGreen: #BCDC3C;
+$color-white: #ffffff;
+
+//TYPOGRAPHY
+$type-titleHeader: 64px;
+$type-subTitle: 48px;
+$type-bodyText: 20px;
+$type-buttonText: 24px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title__main {
+    color: $color-tosca;
+    font-size: 20px;
+    padding: 1em 0;
+}
+
+.title__sub {
+    font-size: 18px;
+}
+
+.content {
+    display: block;
+}
+
+//HEADER
+.content__header {
+    background: $color-white;
+    padding: 2em 1em;
+
+    p {
+        color: rgb(175, 175, 175);
+        font-size: 14px;
+        line-height: 2em;
+    }
+}
+
+.title__sub {
+    font-size: 18px;
+    padding-bottom: 1em;
+    font-weight: 400;
+}
+
+.sub__head {
+    color: $color-yellowGreen;
+}
+//END HEADER
+
+//CONTENT
+.content__price {
+    background: $color-toscaDarker;
+    color: $color-white;
+    padding: 3em 1em;
+
+    .subs {
+        color: #7ad6d6;
+
+        span {
+            color: $color-white;
+            font-size: 32px;
+        }
+    }
+
+    .price__desc {
+        opacity: .8;
+        font-size: 14px;
+        line-height: 2em;
+    }
+
+    button {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        background-color: $color-yellowGreen;
+        color: $color-white;
+        padding: .5em 0;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
+
+        &:hover {
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, .2);
+        }
+    }
+}
+
+.content__desc {
+    background: $color-tosca;
+    color: $color-white;
+    padding: 3em 1em;
+
+    .desc {
+        opacity: .8;
+        font-size: 14px;
+        line-height: 2em;
+    }
+}
+//END CONTENT
+
+//RESPONSIVE
+@media screen and (min-width: 600px) {
+    .content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .content {
+        padding: auto 4em;
+    }
+}
